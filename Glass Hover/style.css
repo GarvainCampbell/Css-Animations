@@ -1,0 +1,91 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1e2759;
+}
+ul
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, .25);
+}
+ul li
+{
+    list-style: none;
+}
+ul li a 
+{
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 20px 30px;
+    z-index: 1000;
+    backdrop-filter: blur(15px);
+}
+ul li a ion-icon {
+    font-size: 2.5em;
+    pointer-events: none;
+    opacity: 0.25;
+    transition: 0.25;
+}
+ul li.active a ion-icon 
+{
+    opacity: 1;
+}
+#marker
+{
+    position: absolute;
+    top: 0;
+    transition: 0.5s;
+    z-index: 1;
+}
+#marker::before{
+    content: '';
+    position: absolute;
+    top: -10;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 40px;
+    border-radius: 8px;
+    
+}
+
+ul li:nth-child(1).active ~ #marker::before
+{
+    background: #9c56f7;
+    box-shadow: 0 0 15px #9c56f7, 0 0 30px #9c56f7, 0 0 45px #9c56f7, 0 0 60px #9c56f7;
+}
+ul li:nth-child(2).active ~ #marker::before
+{
+    background: #de4a24;
+    box-shadow: 0 0 15px #de4a24, 0 0 30px #de4a24, 0 0 45px #de4a24, 0 0 60px #de4a24;
+}
+ul li:nth-child(3).active ~ #marker::before
+{
+    background: #d46da2;
+    box-shadow: 0 0 15px #d46da2, 0 0 30px #d46da2, 0 0 45px #d46da2, 0 0 60px #d46da2;
+}
+ul li:nth-child(4).active ~ #marker::before
+{
+    background: #e1c32f;
+    box-shadow: 0 0 15px #e1c32f, 0 0 30px #e1c32f, 0 0 45px #e1c32f, 0 0 60px #e1c32f;
+}
+ul li:nth-child(5).active ~ #marker::before
+{
+    background: #346b99;
+    box-shadow: 0 0 15px #346b99, 0 0 30px #346b99, 0 0 45px #346b99, 0 0 60px #346b99;
+}
